@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1584153169 source:c:\users\michael-gpc\documents\code blocks work\lab 6\loshusquare.cpp
+	"LoShuSquare.h"
+	<iostream>
+
+1584152351 c:\users\michael-gpc\documents\code blocks work\lab 6\loshusquare.h
+
+1584153139 source:c:\users\michael-gpc\documents\code blocks work\lab 6\main.cpp
+	<iostream>
+	"LoShuSquare.h"
+
