@@ -43,23 +43,3 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
-/*OUTPUT
-Please enter values for row 0 separated by space: 4 9 2
-492
-000
-000
-This is not a magic square. Try again.
-Please enter values for row 1 separated by space: 3 5 7
-492
-357
-000
-This is not a magic square. Try again.
-Please enter values for row 2 separated by space: 8 1 6
-492
-357
-816
-Congratulations, this is a magic square!
-
-Process returned 0 (0x0)   execution time : 17.507 s
-Press any key to continue.
-*/

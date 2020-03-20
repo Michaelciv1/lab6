@@ -6,19 +6,24 @@ using namespace std;
 //Sets all the values in the square to zero
 LoShuSquare::LoShuSquare()
 {
-    for (int i=0; i < ROWS; i++)
-        for (int j=0; j < COLS; j++)
+    cout << "Enter the side length of the square: ";
+    cin >> SIZE;
+    int** squares = new int*[SIZE];  // allocates an array of pointers (each pointing to a row)
+    for(int i = 0; i < SIZE; i++)
+    squares[i] = new int[SIZE];  // allocates elements for each row
+    for (int i=0; i < SIZE; i++)
+        for (int j=0; j < SIZE; j++)
         squares[i][j] = 0;
 }
 
 //Prints the board in a 3x3 square. Does not return anything.
 void LoShuSquare::printBoard(){
     int cnt = 0;
-    for (int i=0; i < ROWS; i++)
-        for (int j=0; j < COLS; j++){
+    for (int i=0; i < SIZE; i++)
+        for (int j=0; j < SIZE; j++){
         cout << squares[i][j];
         cnt += 1;
-        if (cnt % COLS == 0)
+        if (cnt % SIZE == 0)
             cout << endl;
     }
 }
@@ -31,8 +36,8 @@ void LoShuSquare::fill(int row, int col, int value){
 //Private function that checks if the sum of all three rows adds to 45. Returns true or false.
 bool LoShuSquare::checkRow(){
     int sum = 0;
-    for (int i=0; i < ROWS; i++)
-        for (int j=0; j<COLS; j++)
+    for (int i=0; i < SIZE; i++)
+        for (int j=0; j<SIZE; j++)
         sum += squares[i][j];
     if (sum == 45)
         return true;
@@ -43,8 +48,8 @@ bool LoShuSquare::checkRow(){
 //Private function that checks if the sum of all three columns adds to 45. Returns true or false.
 bool LoShuSquare::checkCol(){
     int sum = 0;
-    for (int i=0; i < ROWS; i++)
-        for (int j=0; j<COLS; j++)
+    for (int i=0; i < SIZE; i++)
+        for (int j=0; j<SIZE; j++)
         sum += squares[j][i];
     if (sum == 45)
         return true;

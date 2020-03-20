@@ -13,13 +13,11 @@
 #ifndef LOSHUSQUARE_H
 #define LOSHUSQUARE_H
 
-const int ROWS = 3;
-const int COLS = 3;
-
 class LoShuSquare
 {
     private:
-        int squares[ROWS][COLS];
+        int SIZE;
+        int squares[];
         bool checkRow();
         bool checkCol();
         bool checkDiag();
